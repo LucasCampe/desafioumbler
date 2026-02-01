@@ -93,4 +93,9 @@ Se você rodar o projeto e testar um domínio, verá que ele já está funcionan
 
 # Modificações:
 
-- DESCREVA AQUI O OBJETIVO DAS MODIFICAÇÕES...
+- Foi abstraído o Controller com a parte de Services para também auxiliar com o teste comentado proposto. Fazendo as interfaces para o DNS e o WhoIs;
+- Ajustado os testes para que possam permitir a nova abstração feita;
+- Quando os testes são rodados em totalidade passam ok, porém se é tentado rodar o teste comentado isoladamente está dando erro que não consegui corrigir, sei que é algo com algum valor nullable no IP;
+- Foi adicionada a validação para não permitir domínios não formatados (ex: google retorna BadRequest, aceita google.com/algumacoisa pois irá buscar apenas google.com);
+- Melhorada a visualização dos dados do JSON recebido no Front;
+
